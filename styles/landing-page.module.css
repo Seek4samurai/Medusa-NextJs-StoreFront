@@ -68,6 +68,10 @@
   animation: heartbeat 1.5s infinite both;
 }
 
+.scrollIcon {
+  animation: drop 1s infinite both;
+}
+
 .canvas {
   width: 100vw;
 }
@@ -102,5 +106,38 @@
   100% {
     -webkit-transform: scale(1);
     transform: scale(1);
+  }
+}
+
+@-webkit-keyframes drop {
+  from {
+    -webkit-transform: translateY(10px);
+  }
+  20% {
+    -webkit-transform: translateY(16px);
+  }
+  50% {
+    -webkit-transform: translateY(16px);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+  }
+}
+@keyframes drop {
+  from {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+  20% {
+    -webkit-transform: translateY(16px);
+    transform: translateY(16px);
+  }
+  50% {
+    -webkit-transform: translateY(16px);
+    transform: translateY(16px);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
   }
 }

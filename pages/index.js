@@ -1,12 +1,16 @@
-import styles from "../styles/landing-page.module.css";
-import Link from "next/link";
 import Image from "next/image";
-import { createClient } from "../utils/client";
-import { FaGithub } from "react-icons/fa";
-import { formatPrices } from "../utils/prices";
+import Link from "next/link";
 import { useContext } from "react";
+import { AiFillCaretDown } from "react-icons/ai";
+import { FaGithub } from "react-icons/fa";
 import StoreContext from "../context/store-context";
+import MedusaLogo from "../public/medusa-logo.svg";
 import field from "../public/fieldSvg.svg";
+import styles from "../styles/landing-page.module.css";
+import store from "../styles/store.module.css";
+import footer from "../styles/footer.module.css";
+import { createClient } from "../utils/client";
+import { formatPrices } from "../utils/prices";
 
 export default function Home({ products }) {
   const { cart } = useContext(StoreContext);
@@ -59,33 +63,67 @@ export default function Home({ products }) {
             best-in-breed commerce stack.
           </p>
         </div>
+        <div className={styles.scrollIcon}>
+          <AiFillCaretDown size={50}></AiFillCaretDown>
+        </div>
         <div className={styles.canvas}>
           <Image src={field} alt="field" layout="responsive"></Image>
         </div>
-        {/* <div className={styles.products}>
-          <h2>Demo Products</h2>
-          <div className={styles.grid}>
-            {products &&
-              products.map((p) => {
-                return (
-                  <div key={p.id} className={styles.card}>
-                    <Link
-                      href={{ pathname: `/product/[id]`, query: { id: p.id } }}
-                      passHref
-                    >
-                      <a>
-                        <div>
-                          <h2>{p.title}</h2>
-                          <p>{formatPrices(cart, p.variants[0])}</p>
-                        </div>
-                      </a>
-                    </Link>
-                  </div>
-                );
-              })}
+        <div className={store.container}>
+          <h1 className={store.title}>Check out our store</h1>
+          <div className={store.circles}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-        </div> */}
+          <div className={store.products}>
+            <div className={store.grid}>
+              {products &&
+                products.map((p) => {
+                  return (
+                    <div key={p.id} className={store.card}>
+                      <Link
+                        href={{
+                          pathname: `/product/[id]`,
+                          query: { id: p.id },
+                        }}
+                        passHref
+                      >
+                        <a target="_blank">
+                          <h2>{p.title}</h2>
+                          <div className={store.imgHolder}>
+                            <Image
+                              src={p.thumbnail}
+                              alt="thumbnail"
+                              width={400}
+                              height={500}
+                            ></Image>
+                          </div>
+                          <p>{p.description}</p>
+                          <p>{formatPrices(cart, p.variants[0])}</p>
+                        </a>
+                      </Link>
+                    </div>
+                  );
+                })}
+            </div>
+          </div>
+        </div>
       </main>
+      <footer className={footer.container}>
+        <div className={footer.main}>
+          <Link href="/">
+            <a style={{ width: "125px" }}>
+              <Image src={MedusaLogo} height="40px" width="100%" alt="logo" />
+            </a>
+          </Link>
+          <p>© 2022 Medusa – All Rights Reserved</p>
+          <p>Catch us on hello@medusajs.com</p>
+        </div>
+        <div className={footer.list}></div>
+      </footer>
     </div>
   );
 }
