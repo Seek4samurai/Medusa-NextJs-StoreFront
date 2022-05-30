@@ -24,6 +24,12 @@
   align-items: center;
   font-size: var(--fz-sm);
   cursor: pointer;
+  margin-left: 2rem;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background: #56fbb1;
 }
 
 .btn span {
@@ -33,6 +39,25 @@
 
 .btn svg {
   font-size: var(--fz-ml);
+}
+
+.navBtnContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.navBtn {
+  width: 90px;
+  padding: 0.5rem;
+  margin-left: 2rem;
+  text-align: center;
+  background: #d9d9d9;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+
+.navBtn:hover {
+  background: #56fbb1;
 }
 
 @media (max-width: 876px) {
