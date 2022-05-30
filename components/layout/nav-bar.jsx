@@ -33,13 +33,19 @@ export const NavBar = () => {
       </Link>
       <div className={styles.navBtnContainer}>
         <Link href="https://www.medusa-commerce.com/">
-          <a className={styles.navBtn}>Medusa</a>
+          <a className={styles.navBtn} target="_blank" rel="noreferrer">
+            Medusa
+          </a>
         </Link>
-        <Link href="https://www.medusa-commerce.com/">
-          <a className={styles.navBtn}>Next.js</a>
+        <Link href="https://nextjs.org/docs/getting-started/">
+          <a className={styles.navBtn} target="_blank" rel="noreferrer">
+            Next.js
+          </a>
         </Link>
-        <Link href="https://www.medusa-commerce.com/">
-          <a className={styles.navBtn}>Stripe</a>
+        <Link href="https://stripe.com/docs/">
+          <a className={styles.navBtn} target="_blank" rel="noreferrer">
+            Stripe
+          </a>
         </Link>
         {!isCheckout ? (
           <button
