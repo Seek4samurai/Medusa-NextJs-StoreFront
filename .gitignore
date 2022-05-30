@@ -18,6 +18,7 @@
 # misc
 .DS_Store
 *.pem
+/my-medusa-store
 
 # debug
 npm-debug.log*
