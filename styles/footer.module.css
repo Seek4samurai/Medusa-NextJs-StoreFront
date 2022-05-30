@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.main {
+  padding: 1rem 5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: left;
+}
+
+.listA {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0rem 5rem;
+}
+.listA h4 {
+  margin: 0;
+  padding: 1rem 0;
+}
+.listA span {
+  margin: 0;
+  padding-top: 0.8rem;
+}
+.listA span a:hover {
+  color: #56fbb1;
+}
+.listA li {
+  margin: 0;
+  padding-top: 0.8rem;
+}
+
+.listA li:hover {
+  color: #56fbb1;
+}

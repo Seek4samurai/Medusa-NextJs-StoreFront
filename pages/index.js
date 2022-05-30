@@ -114,15 +114,62 @@ export default function Home({ products }) {
       </main>
       <footer className={footer.container}>
         <div className={footer.main}>
-          <Link href="/">
-            <a style={{ width: "125px" }}>
-              <Image src={MedusaLogo} height="40px" width="100%" alt="logo" />
-            </a>
-          </Link>
-          <p>© 2022 Medusa – All Rights Reserved</p>
-          <p>Catch us on hello@medusajs.com</p>
+          <div className={footer.listA}>
+            <Link href="/">
+              <a style={{ width: "125px" }}>
+                <Image src={MedusaLogo} height="40px" width="100%" alt="logo" />
+              </a>
+            </Link>
+            <span>© 2022 Medusa – All Rights Reserved</span>
+            <span>
+              Catch us on{" "}
+              <Link href="https://ky5eo2x1u81.typeform.com/get-in-touch">
+                <a style={{ fontWeight: "bold" }} target="_blank">
+                  hello@medusajs.com
+                </a>
+              </Link>
+            </span>
+          </div>
+          <div className={footer.listA}>
+            <h4>Docs</h4>
+            <li>
+              <Link href="https://docs.medusajs.com/tutorial/set-up-your-development-environment/">
+                <a target="_blank">Tutorial</a>
+              </Link>
+            </li>
+          </div>
+          <div className={footer.listA}>
+            <h4>Community</h4>
+            <li>
+              <Link href="https://twitter.com/medusajs">
+                <a target="_blank">Twitter</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="https://discord.com/invite/medusajs">
+                <a target="_blank">Discord</a>
+              </Link>
+            </li>
+          </div>
+          <div className={footer.listA}>
+            <h4>More</h4>
+            <li>
+              <Link href="https://medusajs.com/">
+                <a target="_blank">Medusa Home</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="https://github.com/medusajs/medusa">
+                <a target="_blank">GitHub Repo</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="https://ky5eo2x1u81.typeform.com/get-in-touch">
+                <a target="_blank">Contact us</a>
+              </Link>
+            </li>
+          </div>
         </div>
-        <div className={footer.list}></div>
       </footer>
     </div>
   );
