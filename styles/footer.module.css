@@ -39,3 +39,10 @@
 .listA li:hover {
   color: #56fbb1;
 }
+
+@media (max-width: 1090px) {
+  .main {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
