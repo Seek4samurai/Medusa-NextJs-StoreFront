@@ -74,14 +74,28 @@
   background: #56fbb1;
 }
 
+.navLinksSm {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 876px) {
   .container {
     padding: 20px 22px;
   }
   .navBtn {
+    margin-left: 0.5rem;
+  }
+  .navLinks {
     display: none;
   }
   .hamburgurBtn {
     display: flex;
+    margin-left: 0.3rem;
+  }
+  .navLinksSm {
+    display: flex;
+    flex-direction: column;
   }
 }

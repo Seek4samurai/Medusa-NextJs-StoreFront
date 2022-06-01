@@ -9,11 +9,13 @@ import StoreContext from "../../context/store-context";
 import MedusaLogo from "../../public/medusa-logo.svg";
 import styles from "../../styles/nav-bar.module.css";
 import { quantity, sum } from "../../utils/helper-functions";
+import NavLinks from "./nav-links";
 
 export const NavBar = () => {
   const { updateCartViewDisplay } = useContext(DisplayContext);
   const { cart } = useContext(StoreContext);
   const [isCheckout, setIsCheckout] = useState(true);
+  const [navbar, setNavbar] = useState(false);
 
   const router = useRouter();
 
@@ -25,6 +27,10 @@ export const NavBar = () => {
     }
   }, [router.pathname]);
 
+  const handleHamburgur = () => {
+    setNavbar(!navbar);
+  };
+
   return (
     <div className={styles.container}>
       <Link href="/">
@@ -33,22 +39,15 @@ export const NavBar = () => {
         </a>
       </Link>
       <div className={styles.navBtnContainer}>
-        <Link href="https://www.medusa-commerce.com/">
-          <a className={styles.navBtn} target="_blank" rel="noreferrer">
-            Medusa
-          </a>
-        </Link>
-        <Link href="https://nextjs.org/docs/getting-started/">
-          <a className={styles.navBtn} target="_blank" rel="noreferrer">
-            Next.js
-          </a>
-        </Link>
-        <Link href="https://stripe.com/docs/">
-          <a className={styles.navBtn} target="_blank" rel="noreferrer">
-            Stripe
-          </a>
-        </Link>
-        <div className={styles.hamburgurBtn}>
+        <div className={styles.navLinks}>
+          <NavLinks></NavLinks>
+        </div>
+        {navbar ? (
+          <div className={styles.navLinksSm}>
+            <NavLinks></NavLinks>
+          </div>
+        ) : null}
+        <div className={styles.hamburgurBtn} onClick={() => handleHamburgur()}>
           <FaHamburger></FaHamburger>
         </div>
         {!isCheckout ? (
