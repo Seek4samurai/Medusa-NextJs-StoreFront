@@ -74,3 +74,13 @@ Medusa is an open-source headless commerce engine that enables developers to cre
 6. **Learn more about Next.js**
 
    - [Documentation](https://nextjs.org/docs)
+
+## Updated UI
+
+![This is an image](https://github.com/Seek4samurai/Medusa-NextJs-StoreFront/blob/main/public/UI/Home-UI.png)
+
+https://user-images.githubusercontent.com/69115613/171359414-6f747e84-ecf1-4d54-86a0-f3e77d0e9eaa.mov
+
+## Check out Figma
+
+- <a href="https://www.figma.com/file/pDcwj1ddexOKUZSiuQVJkG/Medusa-Next.js-storefront?node-id=0%3A1">Here</a>
