@@ -64,12 +64,14 @@ export default function Home({ products }) {
           </p>
         </div>
         <div className={styles.scrollIcon}>
-          <AiFillCaretDown size={50}></AiFillCaretDown>
+          <Link href="#storeSection" scroll={true} passHref>
+            <AiFillCaretDown size={50}></AiFillCaretDown>
+          </Link>
         </div>
         <div className={styles.canvas}>
           <Image src={field} alt="field" layout="responsive"></Image>
         </div>
-        <div className={store.container}>
+        <section id="storeSection" className={store.container}>
           <h1 className={store.title}>Check out our store</h1>
           <div className={store.circles}>
             <span></span>
@@ -97,12 +99,14 @@ export default function Home({ products }) {
                             <Image
                               src={p.thumbnail}
                               alt="thumbnail"
-                              width={400}
-                              height={500}
+                              width={250}
+                              height={300}
                             ></Image>
                           </div>
                           <p>{p.description}</p>
-                          <p>{formatPrices(cart, p.variants[0])}</p>
+                          <p style={{ color: "#8a4af3" }}>
+                            {formatPrices(cart, p.variants[0])}
+                          </p>
                         </a>
                       </Link>
                     </div>
@@ -110,7 +114,7 @@ export default function Home({ products }) {
                 })}
             </div>
           </div>
-        </div>
+        </section>
       </main>
       <footer className={footer.container}>
         <div className={footer.main}>
@@ -123,10 +127,8 @@ export default function Home({ products }) {
             <span>© 2022 Medusa – All Rights Reserved</span>
             <span>
               Catch us on{" "}
-              <Link href="https://ky5eo2x1u81.typeform.com/get-in-touch">
-                <a style={{ fontWeight: "bold" }} target="_blank">
-                  hello@medusajs.com
-                </a>
+              <Link href="mailto:Catch us on hello@medusajs.com">
+                <a style={{ fontWeight: "bold" }}>hello@medusajs.com</a>
               </Link>
             </span>
           </div>

@@ -61,8 +61,27 @@
   background: #56fbb1;
 }
 
+.hamburgurBtn {
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  display: none;
+  align-items: center;
+  transition: all 0.5s ease-in;
+}
+
+.hamburgurBtn:hover {
+  background: #56fbb1;
+}
+
 @media (max-width: 876px) {
   .container {
     padding: 20px 22px;
+  }
+  .navBtn {
+    display: none;
+  }
+  .hamburgurBtn {
+    display: flex;
   }
 }

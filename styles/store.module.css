@@ -1,5 +1,5 @@
 .container {
-  padding: 0 88px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,8 +62,9 @@
 }
 
 .card {
-  width: 500px;
-  margin: 1rem;
+  width: 400px;
+  height: 560px;
+  margin: 2rem;
   padding: 1.5rem;
 
   color: inherit;
@@ -86,4 +87,6 @@
 
 .imgHolder {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }

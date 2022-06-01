@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useContext, useEffect, useState } from "react";
 import { BiShoppingBag } from "react-icons/bi";
+import { FaHamburger } from "react-icons/fa";
 import DisplayContext from "../../context/display-context";
 import StoreContext from "../../context/store-context";
 import MedusaLogo from "../../public/medusa-logo.svg";
@@ -47,6 +48,9 @@ export const NavBar = () => {
             Stripe
           </a>
         </Link>
+        <div className={styles.hamburgurBtn}>
+          <FaHamburger></FaHamburger>
+        </div>
         {!isCheckout ? (
           <button
             className={styles.btn}

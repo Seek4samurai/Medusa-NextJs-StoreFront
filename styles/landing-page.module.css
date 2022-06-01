@@ -70,10 +70,20 @@
 
 .scrollIcon {
   animation: drop 1s infinite both;
+  cursor: pointer;
 }
 
 .canvas {
   width: 100vw;
+}
+
+@media (max-width: 876px) {
+  .links {
+    flex-direction: column;
+  }
+  .btn {
+    margin: 0.5rem;
+  }
 }
 
 @-webkit-keyframes heartbeat {
